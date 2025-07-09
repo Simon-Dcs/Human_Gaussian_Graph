@@ -98,7 +98,9 @@
                           <span class="author-block">
                             <a href="#" target="_blank">Hao Liu</a><sup>3</sup>,</span>
                               <span class="author-block">
-                                <a href="https://duanyueqi.github.io/" target="_blank">Yueqi Duan</a><sup>1,&#10013</sup>
+                                <a href="#" target="_blank">Chen Li</a><sup>3</sup>,</span>
+                                  <span class="author-block">
+                                    <a href="https://duanyueqi.github.io/" target="_blank">Yueqi Duan</a><sup>1,&#10013</sup>
                   </span>
                   </div>
 
@@ -161,11 +163,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/HGG.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+       Human Gaussian Graph
       </h2>
     </div>
   </div>
@@ -180,7 +182,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Given an input human video, our goal is to build high-fidelity animatable Gaussian representations within inference time. We first establish frame-wise Gaussian representations through a feed-forward 3DGS network. Then, we construct a Human Gaussian Graph (HGG) to model the relations between predicted Gaussians from multiple frames and the SMPL mesh. We introduce two complementary types of operations on the HGG: the intra-node operation that extracts temporal features across multiple timesteps, and the inter-node operation that facilitates robust local message passing between topologically adjacent nodes. Finally, the Gaussians are updated into SMPL-aligned Gaussians through the HGG framework, enabling novel pose animation.
           </p>
         </div>
       </div>
