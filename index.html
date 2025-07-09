@@ -28,20 +28,15 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  
   <style>
 .conference-badge {
   display: inline-flex;
@@ -72,6 +67,87 @@
 
 .affiliation-text {
   margin-bottom: 10px;
+}
+
+/* 修复图片居中问题的CSS */
+.centered-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.carousel-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.results-carousel .item {
+  text-align: center;
+  padding: 20px;
+}
+
+.teaser-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.teaser-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 确保所有section都有正确的居中对齐 */
+.section {
+  text-align: center;
+}
+
+.section .content {
+  text-align: justify;
+}
+
+.section .title {
+  text-align: center;
+}
+
+/* 修复按钮和链接的样式 */
+.button {
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .centered-image {
+    width: 95%;
+  }
+  
+  .conference-badge {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
 }
 </style>
 </head>
@@ -160,11 +236,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/HGG.mp4"
-        type="video/mp4">
-      </video>
+      <div class="teaser-container">
+        <video poster="" id="tree" autoplay controls muted loop class="teaser-video">
+          <!-- Your video here -->
+          <source src="static/videos/HGG.mp4" type="video/mp4">
+        </video>
+      </div>
       <h2 class="subtitle has-text-centered">
        Human Gaussian Graph
       </h2>
@@ -191,12 +268,12 @@
 <!-- End paper abstract -->
 
 
-<section class="hero is-light">
+<section class="section hero is-light">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-3">Our method achieves state-of-the-art rendering quality while maintaining remarkable fast run-time performance.</h2>
-      <div class="image">
-        <img src="static/images/teaser.png" alt="MY ALT TEXT" style="width: 80%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
+      <div class="image-container">
+        <img src="https://via.placeholder.com/800x400?text=Teaser+Image" alt="Teaser showing state-of-the-art results" class="centered-image" style="width: 80%;" />
       </div>
     </div>
   </div>
@@ -205,27 +282,27 @@
 
   
 <!-- Image carousel -->
-<section class="hero is-small">
+<section class="section hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/exp1.png" alt="MY ALT TEXT"/>
+        <img src="https://via.placeholder.com/800x400?text=Qualitative+Comparison" alt="Qualitative comparison results" class="carousel-image"/>
         <h2 class="subtitle has-text-centered">
           Qualitative comparison of ours against GART, ExAvatar, LGM and GPS-Gaussian on MvHumanNet dataset.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/exp_pose.png" alt="MY ALT TEXT"/>
+        <img src="https://via.placeholder.com/800x400?text=Novel+Pose+Animation" alt="Novel pose animation results" class="carousel-image"/>
         <h2 class="subtitle has-text-centered">
           More qualitative results on novel pose animation.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/exp_view.png" alt="MY ALT TEXT"/>
+        <img src="https://via.placeholder.com/800x400?text=Novel+View+Synthesis" alt="Novel view synthesis results" class="carousel-image"/>
         <h2 class="subtitle has-text-centered">
          More qualitative results on novel view synthesis.
        </h2>
@@ -236,12 +313,12 @@
 </section>
 <!-- End image carousel -->
 
-<section class="hero is-light">
+<section class="section hero is-light">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-3">Method Overview</h2>
-      <div class="image">
-        <img src="static/images/pipeline.png" alt="MY ALT TEXT" style="width: 80%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
+      <div class="image-container">
+        <img src="https://via.placeholder.com/800x500?text=Method+Pipeline" alt="Method pipeline overview" class="centered-image" style="width: 80%;" />
       </div>
     </div>
   </div>
@@ -252,7 +329,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{liu2025hgg,
+  title={HGG: Learning Efficient and Generalizable Human Representation with Human Gaussian Model},
+  author={Liu, Yifan and Zhang, Shengjun and Dai, Chensheng and Chen, Yang and Liu, Hao and Li, Chen and Duan, Yueqi},
+  journal={ICCV},
+  year={2025}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -265,7 +347,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
@@ -276,11 +358,36 @@
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<script>
+// Simple carousel functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('results-carousel');
+  if (carousel) {
+    const items = carousel.querySelectorAll('.item');
+    let currentIndex = 0;
+    
+    function showSlide(index) {
+      items.forEach((item, i) => {
+        item.style.display = i === index ? 'block' : 'none';
+      });
+    }
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % items.length;
+      showSlide(currentIndex);
+    }
+    
+    // Show first slide initially
+    showSlide(0);
+    
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+    // Add click functionality to cycle through slides
+    carousel.addEventListener('click', nextSlide);
+  }
+});
+</script>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
