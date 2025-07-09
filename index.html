@@ -94,6 +94,22 @@
   display: block;
 }
 
+/* 添加视频居中样式 */
+.centered-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.centered-video video {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
 /* 轮播图片居中 */
 .carousel .item {
   text-align: center;
@@ -193,11 +209,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/HGG.mp4"
-        type="video/mp4">
-      </video>
+      <div class="centered-video">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/HGG.mp4"
+          type="video/mp4">
+        </video>
+      </div>
       <h2 class="subtitle has-text-centered">
        Human Gaussian Graph can generate high-quality generalizable and animatable human Gaussian representations from monocular videos.
       </h2>
