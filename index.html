@@ -2,6 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <!-- 添加默认favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+  
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
@@ -72,6 +75,36 @@
 
 .affiliation-text {
   margin-bottom: 10px;
+}
+
+/* 改进图片居中样式 */
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.centered-image img {
+  max-width: 80%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: block;
+}
+
+/* 轮播图片居中 */
+.carousel .item {
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel .item img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 </style>
 </head>
@@ -195,8 +228,8 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-3">Our method achieves state-of-the-art rendering quality while maintaining remarkable fast run-time performance.</h2>
-      <div class="image">
-        <img src="static/images/teaser.png" alt="MY ALT TEXT" style="width: 80%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
+      <div class="centered-image">
+        <img src="static/images/teaser.png" alt="MY ALT TEXT" />
       </div>
     </div>
   </div>
@@ -240,8 +273,8 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-3">Method Overview</h2>
-      <div class="image">
-        <img src="static/images/pipeline.png" alt="MY ALT TEXT" style="width: 80%; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
+      <div class="centered-image">
+        <img src="static/images/pipeline.png" alt="MY ALT TEXT" />
       </div>
     </div>
   </div>
